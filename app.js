@@ -7,7 +7,20 @@ const calcBtn = document.getElementById('calc_wealth');
 
 let data = []; //array of objects w all the poeple
 
+getRandomUser();
+getRandomUser();
+getRandomUser();
+
 //Fetch random user and add money
-function getRandomUser() {
-  fetch('http://randomuser.me/api')
+async function getRandomUser() {
+  const res = await fetch('http://randomuser.me/api');
+  const data = await res.json();
+
+  const user = data.results[0];
+
+  const newUser = {
+    name: `${user.name.first} ${user.name.last}`,
+    money: Math.floor(Math.random() * 1000000)
+  }
+  console.log(newUser);
 }
