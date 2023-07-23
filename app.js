@@ -18,9 +18,14 @@ async function getRandomUser() {
 
   const user = data.results[0];
 
-  const newUser = {
-    name: `${user.name.first} ${user.name.last}`,
-    money: Math.floor(Math.random() * 1000000)
+  if (/[aeiou]/i.test(user.name.first)) {
+    const newUser = {
+      name: `${user.name.first} ${user.name.last}`,
+      money: Math.floor(Math.random() * 1000000)
+    }
+    addData(newUser);
+  } else {
+    // If the user name does not contain 'a' or 'i' or 'o' or 'e' or 'u', fetch a new user
+    getRandomUser();
   }
-  console.log(newUser);
-}
+};
