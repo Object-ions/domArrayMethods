@@ -9,12 +9,14 @@
 * _HTML_
 * _CSS_
 * _JavaScript_
-* _Jest_
+* _API_
 
 ## Setup/Installation Requirements
 
-* Clone this repository to your local machine.
-`git clone https://github.com/Object-ions/domArrayMethods.git`
+* Clone this repository to your local machine:
+`
+git clone https://github.com/Object-ions/domArrayMethods.git
+`
 * Navigate to the project directory.
 * Open the file in the browser.
 
